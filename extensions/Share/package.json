@@ -1,0 +1,49 @@
+{
+  "name": "share",
+  "title": "i18n:share.title",
+  "package_version": 2,
+  "version": "1.0.0",
+  "author": "iamhainv",
+  "description": "i18n:share.description",
+  "keywords": [
+    "cocos",
+    "cocos-creator",
+    "cocos-creator-extension",
+    "share",
+    "share-sheet",
+    "social-share",
+    "android",
+    "ios"
+  ],
+  "contributions": {
+    "builder": "./dist/builder.js",
+    "asset-db": {
+      "mount": {
+        "path": "./assets",
+        "readonly": true
+      }
+    }
+  },
+  "dependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "@types/node": "^14.5.2",
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "watch": "tsc -w"
+  },
+  "license": "MIT",
+  "editor": ">=3.8.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamhainv/cocos-share.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iamhainv/cocos-share/issues"
+  },
+  "homepage": "https://github.com/iamhainv/cocos-share#readme"
+}

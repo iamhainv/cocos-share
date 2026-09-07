@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!--
+            ShareFileProvider supplies content:// URIs for files passed via
+            EXTRA_STREAM.  The authority must match the string used in
+            FileProvider.getUriForFile() inside ShareServiceHub.
+        -->
+        <provider
+            android:name="com.cocos.share.ShareFileProvider"
+            android:authorities="${applicationId}.sharefileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/share_file_provider_paths"/>
+        </provider>
+
+        <!--
+            ShareInitProvider fires before Application.onCreate() so the
+            JsbBridgeWrapper listener is ready before the first JS frame.
+        -->
+        <provider
+            android:name="com.cocos.share.ShareInitProvider"
+            android:authorities="${applicationId}.shareinit"
+            android:exported="false"/>
+    </application>
+
+</manifest>
